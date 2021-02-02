@@ -2,7 +2,7 @@
 
 namespace ScriptableObjects
 {
-  [CreateAssetMenu(fileName = "new test SO", menuName = "Project/testSO", order = 0)]
+  [CreateAssetMenu(fileName = "new test SO", menuName = "NUP/testSO", order = 0)]
   public class TestSO : ScriptableObject
   {
     

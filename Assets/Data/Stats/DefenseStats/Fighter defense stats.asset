@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: Fighter defense stats
   m_EditorClassIdentifier: 
   maxHP:
-    useConstant: 0
+    useConstant: 1
     constantValue: 100
     var: {fileID: 0}
+  minHP:
+    useConstant: 1
+    constantValue: 50
+    var: {fileID: 0}
   hpRegen:
-    useConstant: 0
+    useConstant: 1
     constantValue: 1.5
     var: {fileID: 0}
   armor:

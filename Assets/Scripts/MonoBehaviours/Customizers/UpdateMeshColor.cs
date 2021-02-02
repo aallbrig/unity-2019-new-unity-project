@@ -15,7 +15,7 @@ namespace MonoBehaviours.Customizers
 
 		private void Update()
 		{
-			_renderer.material.color = meshColor.Value;
+			_renderer.sharedMaterial.color = meshColor.Value;
 		}
 	}
 }

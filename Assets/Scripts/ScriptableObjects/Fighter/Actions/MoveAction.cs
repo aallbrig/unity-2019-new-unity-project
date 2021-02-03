@@ -7,10 +7,11 @@ namespace ScriptableObjects.Fighter.Actions
 	[CreateAssetMenu(fileName = "New move action", menuName = "NUP/Fighter/Actions/Move", order = 0)]
 	public class MoveAction : FighterAction
 	{
+		public Vector3 destination;
+
 		public override IEnumerator Perform(FighterController self)
 		{
-			self.agent.SetDestination(self.destination);
-
+			self.agent.SetDestination(destination);
 			yield return ReachedDestination(self);
 		}
 

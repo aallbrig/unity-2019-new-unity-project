@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Moving state
   m_EditorClassIdentifier: 
   updateActions: []
+  onDrawGizmosActions:
+  - {fileID: 11400000, guid: 1e56ea680c283a44bac5473a6229d6df, type: 2}
   transitions:
   - decision: {fileID: 11400000, guid: 5f4bb374c258a744a923cb8c96f66b92, type: 2}
     trueState: {fileID: 11400000, guid: cbaf7e2c9a2da7540aad48c3b9763a91, type: 2}

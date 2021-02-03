@@ -13,12 +13,20 @@ namespace ScriptableObjects.FiniteStateMachines.Fighter
 		// [Header("On Trigger Actions")] public List<Action> onTriggerActions
 		// [Header("On Trigger Enter Actions")] public List<Action> onTriggerEnterActions;
 		// [Header("On Trigger Exit Actions")] public List<Action> onTriggerExitActions;
+		[Header("On Draw Gizmos Actions")] public List<Action> onDrawGizmosActions;
 		public List<Transition> transitions;
 
-		public void UpdateState(FighterController controller)
+		// Console errors if this is just called Update
+		public void StateUpdate(FighterController controller)
 		{
 			updateActions.ForEach(action => action.Act(controller));
 			CheckTransitions(controller);
+		}
+
+		// Console errors if this is just called OnDrawGizmos
+		public void StateOnDrawGizmos(FighterController controller)
+		{
+			onDrawGizmosActions.ForEach(action => action.Act(controller));
 		}
 
 		private void CheckTransitions(FighterController controller)

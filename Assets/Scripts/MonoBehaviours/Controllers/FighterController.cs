@@ -12,10 +12,10 @@ namespace MonoBehaviours.Controllers
 		[Header("Static data")] public FighterData data;
 
 		// Dynamic data
-		[HideInInspector] public Vector3 destination;
 		[HideInInspector] public List<FighterController> targets = new List<FighterController>();
 		[HideInInspector] public bool dead;
 
+		// agent can be used for some state (e.g. destination)
 		[HideInInspector] public NavMeshAgent agent;
 		[SerializeField] private float armor;
 		[SerializeField] private float health;
@@ -36,7 +36,12 @@ namespace MonoBehaviours.Controllers
 
 		private void Update()
 		{
-			currentState.UpdateState(this);
+			currentState.StateUpdate(this);
+		}
+
+		private void OnDrawGizmos()
+		{
+			currentState.StateOnDrawGizmos(this);
 		}
 
 		public void TransitionToState(State nextState)

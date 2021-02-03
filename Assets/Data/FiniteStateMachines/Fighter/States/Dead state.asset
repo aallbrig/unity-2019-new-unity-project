@@ -10,12 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f35ec9458154b0cb872a78c647ab09d, type: 3}
-  m_Name: Idle state
+  m_Name: Dead state
   m_EditorClassIdentifier: 
   updateActions: []
   onDrawGizmosActions: []
-  transitions:
-  - decision: {fileID: 11400000, guid: 3b025420fe6916d4399f5309422f4973, type: 2}
-    trueState: {fileID: 11400000, guid: 3054d27e3973959499ee7b55b38a68a8, type: 2}
-  - decision: {fileID: 11400000, guid: 3b025420fe6916d4399f5309422f4973, type: 2}
-    trueState: {fileID: 11400000, guid: 3054d27e3973959499ee7b55b38a68a8, type: 2}
+  transitions: []

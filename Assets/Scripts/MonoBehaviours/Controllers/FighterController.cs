@@ -16,9 +16,9 @@ namespace MonoBehaviours.Controllers
 		[HideInInspector] public bool dead;
 
 		// agent can be used for some state (e.g. destination)
+		public float health;
 		[HideInInspector] public NavMeshAgent agent;
 		[SerializeField] private float armor;
-		[SerializeField] private float health;
 
 		public State currentState;
 		private IEnumerator _actionCoroutine;

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Idle state
   m_EditorClassIdentifier: 
   updateActions: []
+  onDrawGizmosActions: []
   transitions:
   - decision: {fileID: 11400000, guid: 3b025420fe6916d4399f5309422f4973, type: 2}
     trueState: {fileID: 11400000, guid: 3054d27e3973959499ee7b55b38a68a8, type: 2}

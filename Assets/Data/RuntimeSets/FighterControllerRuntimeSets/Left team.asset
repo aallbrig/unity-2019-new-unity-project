@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8def8d42628f40caab78054c02a6b1dd, type: 3}
-  m_Name: Draw line to agent destination
+  m_Script: {fileID: 11500000, guid: dd1b393e12c4406aa0f56fc685a92b72, type: 3}
+  m_Name: Left team
   m_EditorClassIdentifier: 
-  gizmoColor:
-    useConstant: 1
-    constantValue: {r: 0.16216493, g: 1, b: 0, a: 1}
-    var: {fileID: 11400000, guid: 2b7b81a82c11de045929b8de0548790b, type: 2}
+  list: []

@@ -5,7 +5,7 @@ using UnityEngine;
 namespace ScriptableObjects.FiniteStateMachines.Fighter.Decisions
 {
 	[CreateAssetMenu(fileName = "New fighter agent velocity", menuName = "NUP/Fighter/Decisions/FighterAgentVelocity",
-	order = 0)]
+		order = 0)]
 	public class FighterAgentVelocity : Decision
 	{
 		public FloatRef velocity;

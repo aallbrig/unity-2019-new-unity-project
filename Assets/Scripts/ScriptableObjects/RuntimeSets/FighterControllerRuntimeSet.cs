@@ -5,7 +5,7 @@ using UnityEngine;
 namespace ScriptableObjects.RuntimeSets
 {
 	[CreateAssetMenu(fileName = "New fighter controller runtime set", menuName = "NUP/RuntimeSets/FighterController",
-	order = 0)]
+		order = 0)]
 	public class FighterControllerRuntimeSet : ScriptableObject
 	{
 		public List<FighterController> list;

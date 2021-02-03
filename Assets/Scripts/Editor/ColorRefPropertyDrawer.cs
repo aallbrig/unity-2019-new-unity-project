@@ -14,9 +14,7 @@ namespace Editor
 			GUIContent label)
 		{
 			if (_popupStyle == null)
-			{
 				_popupStyle = new GUIStyle(GUI.skin.GetStyle("PaneOptions")) {imagePosition = ImagePosition.ImageOnly};
-			}
 
 			label = EditorGUI.BeginProperty(position, label, property);
 			position = EditorGUI.PrefixLabel(position, label);

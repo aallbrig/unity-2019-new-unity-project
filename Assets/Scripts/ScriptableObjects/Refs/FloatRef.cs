@@ -7,9 +7,9 @@ namespace ScriptableObjects.Refs
 	public class FloatRef
 	{
 		public bool useConstant = true;
-		public float constantValue;
-		public FloatVar var;
+		public FloatVar constantValue;
+		public float var;
 
-		public float Value => useConstant ? constantValue : var.value;
+		public float Value => useConstant ? constantValue.value : var;
 	}
 }

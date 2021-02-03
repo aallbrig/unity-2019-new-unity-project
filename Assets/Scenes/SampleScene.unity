@@ -191,9 +191,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meshColor:
-    useConstant: 0
-    constantValue: {r: 0, g: 0, b: 0, a: 0}
-    var: {fileID: 11400000, guid: 787062e16c5022f4cb92b4af6f0e9122, type: 2}
+    useConstant: 1
+    constantValue: {fileID: 11400000, guid: 787062e16c5022f4cb92b4af6f0e9122, type: 2}
+    var: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &252114168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,9 +299,9 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: f12e5457fa70f6944826386d4e6d2c5d, type: 2}
   targets: []
   dead: 0
+  health: 0
   agent: {fileID: 0}
   armor: 0
-  health: 0
   currentState: {fileID: 11400000, guid: cbaf7e2c9a2da7540aad48c3b9763a91, type: 2}
 --- !u!195 &252114174
 NavMeshAgent:
@@ -815,9 +815,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meshColor:
-    useConstant: 0
-    constantValue: {r: 0, g: 0, b: 0, a: 0}
-    var: {fileID: 11400000, guid: 1321cfd8cf25c7a498963e24a5f1a446, type: 2}
+    useConstant: 1
+    constantValue: {fileID: 11400000, guid: 1321cfd8cf25c7a498963e24a5f1a446, type: 2}
+    var: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &995883594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -833,9 +833,9 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 210865768a04a5441a0209eeb1db9eac, type: 2}
   targets: []
   dead: 0
+  health: 0
   agent: {fileID: 0}
   armor: 0
-  health: 0
   currentState: {fileID: 11400000, guid: cbaf7e2c9a2da7540aad48c3b9763a91, type: 2}
 --- !u!114 &995883595
 MonoBehaviour:

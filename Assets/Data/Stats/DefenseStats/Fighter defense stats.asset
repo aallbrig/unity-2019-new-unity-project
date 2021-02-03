@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e223f75dcde514ab5aa20170716f84, type: 3}
   m_Name: Fighter defense stats
   m_EditorClassIdentifier: 
-  maxHP:
-    useConstant: 1
-    constantValue: 100
-    var: {fileID: 0}
   minHP:
-    useConstant: 1
-    constantValue: 50
-    var: {fileID: 0}
+    useConstant: 0
+    constantValue: {fileID: 0}
+    var: 85
+  maxHP:
+    useConstant: 0
+    constantValue: {fileID: 0}
+    var: 100
   hpRegen:
-    useConstant: 1
-    constantValue: 1.5
-    var: {fileID: 0}
+    useConstant: 0
+    constantValue: {fileID: 0}
+    var: 3.5
   armor:
-    useConstant: 1
-    constantValue: 0
-    var: {fileID: 0}
+    useConstant: 0
+    constantValue: {fileID: 0}
+    var: 0

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Fighter utility stats
   m_EditorClassIdentifier: 
   movementSpeed:
-    useConstant: 0
-    constantValue: 0
-    var: {fileID: 11400000, guid: 62e6eeb5946fbc84e9b1c70650d87958, type: 2}
+    useConstant: 1
+    constantValue: {fileID: 11400000, guid: 62e6eeb5946fbc84e9b1c70650d87958, type: 2}
+    var: 0

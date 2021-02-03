@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   greaterThanCheck: 0
   targetHealth:
-    useConstant: 0
-    constantValue: 0
-    var: {fileID: 0}
+    useConstant: 1
+    constantValue: {fileID: 11400000, guid: 58933f93df2cf8c4c8fc028ae24d4324, type: 2}
+    var: 0

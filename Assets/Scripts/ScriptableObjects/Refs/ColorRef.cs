@@ -8,9 +8,9 @@ namespace ScriptableObjects.Refs
 	public class ColorRef
 	{
 		public bool useConstant = true;
-		public Color constantValue;
-		public ColorVar var;
+		public ColorVar constantValue;
+		public Color var = Color.white;
 
-		public Color Value => useConstant ? constantValue : var.value;
+		public Color Value => useConstant ? constantValue.value : var;
 	}
 }

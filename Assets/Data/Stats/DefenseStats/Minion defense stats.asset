@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: Minion defense stats
   m_EditorClassIdentifier: 
   minHP:
-    useConstant: 1
-    constantValue: 30
-    var: {fileID: 0}
+    useConstant: 0
+    constantValue: {fileID: 0}
+    var: 30
   maxHP:
-    useConstant: 1
-    constantValue: 40
-    var: {fileID: 0}
+    useConstant: 0
+    constantValue: {fileID: 0}
+    var: 60
   hpRegen:
-    useConstant: 1
-    constantValue: 0
-    var: {fileID: 0}
+    useConstant: 0
+    constantValue: {fileID: 0}
+    var: 0
   armor:
-    useConstant: 1
-    constantValue: 0
-    var: {fileID: 0}
+    useConstant: 0
+    constantValue: {fileID: 0}
+    var: 0

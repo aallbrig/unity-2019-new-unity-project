@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using ScriptableObjects.Fighter;
 using ScriptableObjects.FiniteStateMachines.Fighter;
 using UnityEngine;
 using UnityEngine.AI;
-using Random = UnityEngine.Random;
 
 namespace MonoBehaviours.Controllers
 {
@@ -23,8 +21,23 @@ namespace MonoBehaviours.Controllers
 		[SerializeField] private float health;
 
 		public State currentState;
-		private State _startingState;
 		private IEnumerator _actionCoroutine;
+		private State _startingState;
+
+		private void Awake()
+		{
+			health = Random.Range(data.defenseStats.minHP.Value, data.defenseStats.maxHP.Value);
+			SetDeadStatus();
+			armor = data.defenseStats.armor.Value;
+
+			_startingState = currentState;
+			agent = GetComponent<NavMeshAgent>();
+		}
+
+		private void Update()
+		{
+			currentState.UpdateState(this);
+		}
 
 		public void TransitionToState(State nextState)
 		{
@@ -36,24 +49,12 @@ namespace MonoBehaviours.Controllers
 			if (_actionCoroutine != null) StopCoroutine(_actionCoroutine);
 
 			_actionCoroutine = action.Perform(this);
-
 			StartCoroutine(_actionCoroutine);
 		}
 
-		private void SetDeadStatus() => dead = health <= 0;
-
-		private void Awake()
+		private void SetDeadStatus()
 		{
-			health = Random.Range(data.defenseStats.minHP.Value, data.defenseStats.maxHP.Value);
-			SetDeadStatus();
-			armor = data.defenseStats.armor.Value;
-
-			agent = GetComponent<NavMeshAgent>();
-		}
-
-		private void Update()
-		{
-			currentState.UpdateState(this);
+			dead = health <= 0;
 		}
 	}
 }

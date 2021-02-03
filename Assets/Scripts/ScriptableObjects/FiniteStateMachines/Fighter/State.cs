@@ -7,7 +7,12 @@ namespace ScriptableObjects.FiniteStateMachines.Fighter
 	[CreateAssetMenu(fileName = "New fighter state", menuName = "NUP/Fighter/StateMachine/State", order = 0)]
 	public class State : ScriptableObject
 	{
-		[Header("Every Update")] public List<Action> updateActions;
+		[Header("Update Actions")] public List<Action> updateActions;
+
+		// TODO: Explore commented ideas below?
+		// [Header("On Trigger Actions")] public List<Action> onTriggerActions
+		// [Header("On Trigger Enter Actions")] public List<Action> onTriggerEnterActions;
+		// [Header("On Trigger Exit Actions")] public List<Action> onTriggerExitActions;
 		public List<Transition> transitions;
 
 		public void UpdateState(FighterController controller)

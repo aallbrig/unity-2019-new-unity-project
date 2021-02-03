@@ -1,6 +1,8 @@
-﻿namespace ScriptableObjects.FiniteStateMachines.Fighter
+﻿using System;
+
+namespace ScriptableObjects.FiniteStateMachines.Fighter
 {
-	[System.Serializable]
+	[Serializable]
 	public class Transition
 	{
 		public Decision decision;

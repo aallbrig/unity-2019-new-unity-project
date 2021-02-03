@@ -16,10 +16,7 @@ namespace ScriptableObjects.Fighter.Actions
 
 		private static IEnumerator ReachedDestination(FighterController self)
 		{
-			while (self.agent.remainingDistance < 0.1)
-			{
-				yield return null;
-			}
+			while (self.agent.remainingDistance < 0.1) yield return null;
 		}
 	}
 }

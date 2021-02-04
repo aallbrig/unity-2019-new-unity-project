@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defenseStats: {fileID: 11400000, guid: 82d9b0eaf1a98e540ae31e9a4dc0b9c6, type: 2}
   utilityStats: {fileID: 11400000, guid: 8ec6d479d5ee1a142afc7a6005a3b40f, type: 2}
+  battleMeterStats: {fileID: 11400000, guid: 2a4f6fd7869e90a4f9353069148b44f8, type: 2}

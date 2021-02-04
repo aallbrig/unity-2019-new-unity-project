@@ -9,7 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd1b393e12c4406aa0f56fc685a92b72, type: 3}
-  m_Name: All fighters
+  m_Script: {fileID: 11500000, guid: bed60931b7e34ff4b85110365218a5ff, type: 3}
+  m_Name: Slow battle meter
   m_EditorClassIdentifier: 
-  list: []
+  secondsUntilFull:
+    useConstant: 1
+    constantValue: {fileID: 11400000, guid: 58d431fb9ee272f4d852b0e4b5bb69e0, type: 2}
+    var: 0

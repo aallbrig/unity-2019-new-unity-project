@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Interfaces;
 using ScriptableObjects.Fighter;
 using ScriptableObjects.FiniteStateMachines.Fighter;
 using UnityEngine;
@@ -7,7 +8,7 @@ using UnityEngine.AI;
 
 namespace MonoBehaviours.Controllers
 {
-	public class FighterController : MonoBehaviour
+	public class FighterController : MonoBehaviour, IDamageable, IHealable
 	{
 		[Header("Static data")] public FighterData data;
 
@@ -17,12 +18,12 @@ namespace MonoBehaviours.Controllers
 
 		// agent can be used for some state (e.g. destination)
 		public float health;
+		public float battleMeter;
 		[HideInInspector] public NavMeshAgent agent;
 		[SerializeField] private float armor;
 
 		public State currentState;
 		private IEnumerator _actionCoroutine;
-		private State _startingState;
 
 		private void Awake()
 		{
@@ -30,7 +31,6 @@ namespace MonoBehaviours.Controllers
 			SetDeadStatus();
 			armor = data.defenseStats.armor.Value;
 
-			_startingState = currentState;
 			agent = GetComponent<NavMeshAgent>();
 		}
 
@@ -44,16 +44,30 @@ namespace MonoBehaviours.Controllers
 			currentState.StateOnDrawGizmos(this);
 		}
 
+		public void Damage(float damage)
+		{
+			var healthUpdate = Mathf.Clamp(health - damage, 0.0f, data.defenseStats.maxHP.Value);
+			health = healthUpdate;
+			SetDeadStatus();
+		}
+
+		public void Heal(float heal)
+		{
+			var healthUpdate = Mathf.Clamp(health + heal, 0.0f, data.defenseStats.maxHP.Value);
+			health = healthUpdate;
+			SetDeadStatus();
+		}
+
 		public void TransitionToState(State nextState)
 		{
 			currentState = nextState;
 		}
 
-		public void PerformAction(FighterAction action)
+		public void PerformAction(ActionPerformance actionPerformance)
 		{
 			if (_actionCoroutine != null) StopCoroutine(_actionCoroutine);
 
-			_actionCoroutine = action.Perform(this);
+			_actionCoroutine = actionPerformance.Perform(this);
 			StartCoroutine(_actionCoroutine);
 		}
 

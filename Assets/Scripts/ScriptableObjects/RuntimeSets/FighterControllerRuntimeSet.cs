@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using MonoBehaviours.Controllers;
 using UnityEngine;
 
@@ -18,6 +19,23 @@ namespace ScriptableObjects.RuntimeSets
 		public void Remove(FighterController controller)
 		{
 			if (list.Contains(controller)) list.Remove(controller);
+		}
+
+		private void Awake()
+		{
+			list.Clear();
+		}
+		private void OnEnable()
+		{
+			list.Clear();
+		}
+		private void OnDisable()
+		{
+			list.Clear();
+		}
+		private void OnDestroy()
+		{
+			list.Clear();
 		}
 	}
 }

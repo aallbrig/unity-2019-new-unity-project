@@ -2,10 +2,10 @@
 using MonoBehaviours.Controllers;
 using UnityEngine;
 
-namespace ScriptableObjects.Fighter.Actions
+namespace ScriptableObjects.Fighter.ActionPerformances
 {
 	[CreateAssetMenu(fileName = "New move action", menuName = "NUP/Fighter/Actions/Move", order = 0)]
-	public class MoveAction : FighterAction
+	public class MoveActionPerformance : ActionPerformance
 	{
 		public Vector3 destination;
 

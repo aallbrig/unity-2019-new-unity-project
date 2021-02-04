@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 namespace MonoBehaviours.EventListeners
 {
-	public class GameEventListener : MonoBehaviour, IEventListener
+	public class GameEventListener : MonoBehaviour
 	{
 		public GameEvent soEvent;
 		public UnityEvent unityEvent;
@@ -22,7 +22,7 @@ namespace MonoBehaviours.EventListeners
 
 		public void OnDisable()
 		{
-			soEvent.RegisterListener(this);
+			soEvent.UnregisterListener(this);
 		}
 	}
 }

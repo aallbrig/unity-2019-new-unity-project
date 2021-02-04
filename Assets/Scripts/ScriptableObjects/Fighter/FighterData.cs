@@ -8,5 +8,6 @@ namespace ScriptableObjects.Fighter
 	{
 		public DefenseStats defenseStats;
 		public UtilityStats utilityStats;
+		public BattleMeterStats battleMeterStats;
 	}
 }

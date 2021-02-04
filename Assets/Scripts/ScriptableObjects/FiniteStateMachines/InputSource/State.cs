@@ -12,14 +12,8 @@ namespace ScriptableObjects.FiniteStateMachines.InputSource
 		public List<Action> exitActions;
 		public List<Transition> transitions;
 
-		public void Enter(InputController controller)
-		{
-			enterActions.ForEach(action => action.Act(controller));
-		}
-		public void Exit(InputController controller)
-		{
-			exitActions.ForEach(action => action.Act(controller));
-		}
+		public void Enter(InputController controller) => enterActions.ForEach(action => action.Act(controller));
+		public void Exit(InputController controller) => exitActions.ForEach(action => action.Act(controller));
 
 		// Console errors if this is just called Update
 		public void StateUpdate(InputController controller)
@@ -28,13 +22,10 @@ namespace ScriptableObjects.FiniteStateMachines.InputSource
 			CheckTransitions(controller);
 		}
 
-		private void CheckTransitions(InputController controller)
+		private void CheckTransitions(InputController controller) => transitions.ForEach(transition =>
 		{
-			transitions.ForEach(transition =>
-			{
-				if (transition.decision.Decide(controller))
-					controller.TransitionToState(transition.trueState);
-			});
-		}
+			if (transition.decision.Decide(controller))
+				controller.TransitionToState(transition.trueState);
+		});
 	}
 }

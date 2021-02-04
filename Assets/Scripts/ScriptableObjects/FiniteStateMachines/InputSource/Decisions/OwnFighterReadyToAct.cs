@@ -7,9 +7,6 @@ namespace ScriptableObjects.FiniteStateMachines.InputSource.Decisions
 		order = 0)]
 	public class OwnFighterReadyToAct : Decision
 	{
-		public override bool Decide(InputController controller)
-		{
-			return controller.activeFighter != null;
-		}
+		public override bool Decide(InputController controller) => controller.activeFighter != null;
 	}
 }

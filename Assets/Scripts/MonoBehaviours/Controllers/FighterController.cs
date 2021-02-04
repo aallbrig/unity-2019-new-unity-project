@@ -34,15 +34,9 @@ namespace MonoBehaviours.Controllers
 			agent = GetComponent<NavMeshAgent>();
 		}
 
-		private void Update()
-		{
-			currentState.StateUpdate(this);
-		}
+		private void Update() => currentState.StateUpdate(this);
 
-		private void OnDrawGizmos()
-		{
-			currentState.StateOnDrawGizmos(this);
-		}
+		private void OnDrawGizmos() => currentState.StateOnDrawGizmos(this);
 
 		public void Damage(float damage)
 		{
@@ -58,10 +52,7 @@ namespace MonoBehaviours.Controllers
 			SetDeadStatus();
 		}
 
-		public void TransitionToState(State nextState)
-		{
-			currentState = nextState;
-		}
+		public void TransitionToState(State nextState) => currentState = nextState;
 
 		public void PerformAction(ActionPerformance actionPerformance)
 		{
@@ -71,9 +62,6 @@ namespace MonoBehaviours.Controllers
 			StartCoroutine(_actionCoroutine);
 		}
 
-		private void SetDeadStatus()
-		{
-			dead = health <= 0;
-		}
+		private void SetDeadStatus() => dead = health <= 0;
 	}
 }

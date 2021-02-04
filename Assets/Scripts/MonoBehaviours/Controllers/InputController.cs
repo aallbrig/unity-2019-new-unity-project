@@ -41,10 +41,7 @@ namespace MonoBehaviours.Controllers
 			targets = new List<FighterController>();
 		}
 
-		public void QueueFighter(FighterController fighter)
-		{
-			_inputQueue.Enqueue(fighter);
-		}
+		public void QueueFighter(FighterController fighter) => _inputQueue.Enqueue(fighter);
 
 		public void TransitionToState(State nextState)
 		{

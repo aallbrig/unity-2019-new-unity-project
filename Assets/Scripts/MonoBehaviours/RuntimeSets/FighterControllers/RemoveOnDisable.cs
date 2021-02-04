@@ -8,9 +8,6 @@ namespace MonoBehaviours.RuntimeSets.FighterControllers
 	{
 		public FighterControllerRuntimeSet set;
 
-		private void OnDisable()
-		{
-			set.Remove(GetComponent<FighterController>());
-		}
+		private void OnDisable() => set.Remove(GetComponent<FighterController>());
 	}
 }

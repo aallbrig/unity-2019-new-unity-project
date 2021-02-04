@@ -24,18 +24,13 @@ namespace ScriptableObjects.FiniteStateMachines.Fighter
 		}
 
 		// Console errors if this is just called OnDrawGizmos
-		public void StateOnDrawGizmos(FighterController controller)
-		{
+		public void StateOnDrawGizmos(FighterController controller) =>
 			onDrawGizmosActions.ForEach(action => action.Act(controller));
-		}
 
-		private void CheckTransitions(FighterController controller)
+		private void CheckTransitions(FighterController controller) => transitions.ForEach(transition =>
 		{
-			transitions.ForEach(transition =>
-			{
-				if (transition.decision.Decide(controller))
-					controller.TransitionToState(transition.trueState);
-			});
-		}
+			if (transition.decision.Decide(controller))
+				controller.TransitionToState(transition.trueState);
+		});
 	}
 }

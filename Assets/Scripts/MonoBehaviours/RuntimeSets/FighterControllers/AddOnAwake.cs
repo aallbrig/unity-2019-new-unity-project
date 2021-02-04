@@ -8,9 +8,6 @@ namespace MonoBehaviours.RuntimeSets.FighterControllers
 	{
 		public FighterControllerRuntimeSet set;
 
-		private void Awake()
-		{
-			set.Add(GetComponent<FighterController>());
-		}
+		private void Awake() => set.Add(GetComponent<FighterController>());
 	}
 }

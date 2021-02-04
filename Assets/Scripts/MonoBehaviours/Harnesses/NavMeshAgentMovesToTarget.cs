@@ -7,14 +7,8 @@ namespace MonoBehaviours.Harnesses
 	{
 		public Transform target;
 		[SerializeField] private NavMeshAgent agent;
-		private void Awake()
-		{
-			agent = GetComponent<NavMeshAgent>();
-		}
+		private void Awake() => agent = GetComponent<NavMeshAgent>();
 
-		private void Update()
-		{
-			agent.SetDestination(target.position);
-		}
+		private void Update() => agent.SetDestination(target.position);
 	}
 }

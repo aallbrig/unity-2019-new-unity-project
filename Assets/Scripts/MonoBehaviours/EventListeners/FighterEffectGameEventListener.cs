@@ -13,19 +13,10 @@ namespace MonoBehaviours.EventListeners
 		public FighterEffectGameEvent soEvent;
 		public FighterEffectGameEventUnityEvent unityEvent;
 
-		public void OnEventBroadcast(FighterController fighter, float effectValue)
-		{
-			unityEvent.Invoke(fighter, effectValue);
-		}
+		public void OnEnable() => soEvent.RegisterListener(this);
 
-		public void OnEnable()
-		{
-			soEvent.RegisterListener(this);
-		}
+		public void OnDisable() => soEvent.UnregisterListener(this);
 
-		public void OnDisable()
-		{
-			soEvent.UnregisterListener(this);
-		}
+		public void OnEventBroadcast(FighterController fighter, float effectValue) => unityEvent.Invoke(fighter, effectValue);
 	}
 }
